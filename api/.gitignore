@@ -1,0 +1,6 @@
+vendor
+html
+.phpunit.result.cache
+phalcon.bat
+cache/*
+!cache/.gitkeep

@@ -1,0 +1,49 @@
+version: '3'
+
+services:
+  api:
+    container_name: api
+    build:
+        context: .
+        dockerfile: .docker/api/Dockerfile
+    working_dir: /var/www/html
+    volumes:
+      - ./api/:/var/www/html
+    ports:
+      - '8080:80'
+    expose:
+      - '8080'
+    depends_on:
+      - mysql
+    links:
+      - mysql
+
+  frontend:
+    container_name: frontend
+    build:
+      context: .
+      dockerfile: ./.docker/frontend/Dockerfile
+    working_dir: /app/
+    volumes:
+    - ./frontend/:/app
+    ports:
+      - '3000:3000'
+    expose:
+      - '3000'
+    depends_on:
+      - api
+    command:
+      - /bin/sh
+      - -c
+      - make -C /app/ start-local
+
+  mysql:
+    container_name: mysql
+    image: mysql:8
+    environment:
+      MYSQL_DATABASE: phalcon_app
+      MYSQL_ROOT_PASSWORD: root
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    ports:
+      - '3306:3306'

@@ -1,0 +1,57 @@
+.styleHome {
+  background: lightgray;
+  color: black;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 56px);
+}
+.noResult {
+  background: lightgray;
+  color: black;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 142px);
+}
+.styleHomeTop {
+  background: lightgray;
+  color: black;
+  font-size: 20px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  height: calc(100vh - 56px);
+  padding-top: 50px;
+}
+.styleHomeTop form {
+  width: 50%;
+}
+.styleHomeLeft {
+  background: lightgray;
+  color: black;
+  font-size: 20px;
+  display: flex;
+  align-items: start;
+  justify-content: left;
+  height: calc(100vh - 56px);
+  padding: 50px 0 0 50px;
+}
+.largeButton {
+  width: 300px;
+  margin-top: 10px;
+}
+table {
+  margin-top: 20px;
+}
+.pagination {
+  margin: 0;
+}
+.btn {
+  margin-left: 5px;
+}
+
