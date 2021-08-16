@@ -22,3 +22,14 @@
 API
 * docker exec -ti api bash
 * ./vendor/bin/phpunit application/tests/Unit --coverage-text
+
+## Access
+Frontend : http://localhost:3000
+
+### Admin account
+* name : admin
+* password : 123456
+
+### User account
+* name : user
+* password : 123456
